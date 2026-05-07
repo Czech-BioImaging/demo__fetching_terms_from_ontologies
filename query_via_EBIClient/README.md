@@ -3,10 +3,19 @@ This example is based on the [BioImage Archive's `gide-search`
 
 ### How to install
 
+#### Directly from `gide-search` sources
+
 ```bash
 git clone git@github.com:BioImage-Archive/gide-search.git
 cd gide-search
 pixi init
+pip install -e .
+```
+
+#### Using the prepared `pixi` environment
+
+```bash
+pixi shell
 ```
 
 ### How to use
