@@ -31,14 +31,17 @@ class EBI():
             # filter and collect responses
             for elem in r['elements']:
                 if not elem['isObsolete'] and (not self.choose_only_leafs or elem['hasDirectChildren'] == False):
-                    results.append([elem['label'][0], onto, elem['iri']])
+                    results.append([ elem['label'][0], onto, elem['iri'] ])
         return results
+        #
+        # some more notes:
+        #
+        # r['label'][0]            - to display, to search for
+        # r['hasDirectChildren']   ~ is a leaf?
+        #     r['numDescendants'] == 0?
+        # r['isObsolete'] == false
+        # r['iri'] - to keep with this value (attribute, to which this is a value,
+        #            has iri to the rembi-cz space)
 
-# some more notes:
-#
-#   r['label'][0]            - to display, to search for
-#   r['hasDirectChildren']   ~ is a leaf?
-#       r['numDescendants'] == 0?
-#   r['isObsolete'] == false
-#   r['iri'] - to keep with this value (attribute, to which this is a value,
-#              has iri to the rembi-cz space)
+    def list_all_ontologies_from_the_source(self):
+        return [ onto['ontologyId'] for onto in self.ebiclient.get_ontologies() ]
