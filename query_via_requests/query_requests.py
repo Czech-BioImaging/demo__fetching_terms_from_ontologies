@@ -8,7 +8,7 @@ class Requests():
         self.ontologies = ontologies
         self.choose_only_leafs = False
 
-    def set_API_URL(self, new_url: str = 'https://www.ebi.ac.uk/ols4/api'):
+    def set_API_URL(self, new_url: str = 'https://www.ebi.ac.uk'):
         self.url = new_url
 
     def search(self, so_far_typed_search_term):
