@@ -1,0 +1,8 @@
+return val:
+- color code base on "leafness"
+- ontology with a version
+  - does IRI tell the ontology and its version?
+- upstream path in the onto (to get better context)
+
+
+can we build a proxy onto server?
