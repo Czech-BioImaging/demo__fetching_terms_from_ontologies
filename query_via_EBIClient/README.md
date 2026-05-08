@@ -21,8 +21,8 @@ pixi shell
 ### How to use
 
 ```python
-from query_EBI import EBI as Q
-q = Q(['fbbi', 'obi'])
+from query_EBI import EBI
+q = EBI(['fbbi', 'obi'])
 
 # for inspiration of what ontologies (and what are they shortnames) are supported:
 q.list_all_ontologies_from_the_source()
